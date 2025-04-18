@@ -1,0 +1,17 @@
+import { AppSidebar } from '@/components/app-sidebar'
+import { SidebarProvider } from '@/components/ui/sidebar'
+import { createFileRoute } from '@tanstack/react-router'
+
+export const Route = createFileRoute('/app')({
+	component: RouteComponent,
+})
+
+function RouteComponent() {
+	return (
+		<>
+			<SidebarProvider>
+				<AppSidebar />
+			</SidebarProvider>
+		</>
+	)
+}
