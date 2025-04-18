@@ -6,8 +6,6 @@ import {
 	Command,
 	Frame,
 	GalleryVerticalEnd,
-	Map,
-	PieChart,
 	Settings2,
 	SquareTerminal,
 } from "lucide-react"
@@ -23,13 +21,12 @@ import {
 	SidebarHeader,
 	SidebarRail,
 } from "@/components/ui/sidebar"
-import { DarkModeToggle } from "./dark-mode-toggle"
 
 // This is sample data.
 const data = {
 	user: {
-		name: "shadcn",
-		email: "m@example.com",
+		name: "Luke Goddard",
+		email: "l-goddard@gmail.com",
 		avatar: "/avatars/shadcn.jpg",
 	},
 	teams: [
@@ -142,16 +139,6 @@ const data = {
 			url: "#",
 			icon: Frame,
 		},
-		{
-			name: "Sales & Marketing",
-			url: "#",
-			icon: PieChart,
-		},
-		{
-			name: "Travel",
-			url: "#",
-			icon: Map,
-		},
 	],
 }
 
@@ -160,7 +147,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 		<Sidebar collapsible="icon" {...props}>
 			<SidebarHeader>
 				<TeamSwitcher teams={data.teams} />
-				<DarkModeToggle />
 			</SidebarHeader>
 			<SidebarContent>
 				<NavMain items={data.navMain} />

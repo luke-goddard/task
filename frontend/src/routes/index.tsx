@@ -9,9 +9,8 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
 	return (
 		<>
-			<p> Test</p>
 			<SidebarProvider>
-			<AppSidebar />
+				<AppSidebar />
 			</SidebarProvider>
 		</>
 	)
